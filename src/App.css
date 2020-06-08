@@ -8,6 +8,15 @@ body {
   margin-top: 3rem;
 }
 
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 1000px;
+  }
+}
+
 #title {
   padding: 1rem;
   border: 5px solid white;
