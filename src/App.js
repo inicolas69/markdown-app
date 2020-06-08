@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import FooterPage from './Components/Footer'
 
 import marked from 'marked'
 
@@ -43,7 +44,7 @@ class App extends Component {
               <h2 className='title'>Markdown</h2>
               <textarea
                 id='my-textarea'
-                spellcheck='false'
+                spellCheck='false'
                 onChange={this.handleChange}
                 value={this.state.text}
                 className='form-control'
@@ -59,6 +60,7 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <FooterPage />
       </div>
     )
   }
