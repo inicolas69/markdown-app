@@ -29,6 +29,16 @@ class App extends Component {
     this.setState({ text })
   }
 
+  handleClickClear = event => {
+    const text = ''
+    this.setState({ text })
+  }
+
+  handleClickReset = event => {
+    const text = sampleText
+    this.setState({ text })
+  }
+
   renderText = text => {
     const __html = marked(text, { sanitize: true })
     return { __html }
@@ -38,7 +48,9 @@ class App extends Component {
     return (
       <div className='App'>
         <div className='container'>
-          <h1 className='title' id='title'>Editeur de Markdown</h1>
+          <h1 className='title' id='title'>
+            Editeur de Markdown
+          </h1>
           <div className='row'>
             <div className='col-sm-6'>
               <h2 className='title'>Markdown</h2>
@@ -50,6 +62,10 @@ class App extends Component {
                 className='form-control'
                 rows='35'
               />
+              <div className='buttons'>
+                <button onClick={this.handleClickClear}>Tout effacer</button>
+                <button onClick={this.handleClickReset}>Réinitialiser</button>
+              </div>
             </div>
             <div className='col-sm-6'>
               <h2 className='title'>Résultat</h2>
